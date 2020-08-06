@@ -1,0 +1,73 @@
+@import "normalize.css";
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Anonymous Pro', monospace;
+    background-color: #2B2F3E;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title-intro {
+    display: flex;
+}
+
+.title-intro .console {
+    color: orange;
+    margin: 5em 5;
+}
+
+.title-intro .typed-text {
+    position: relative;
+    margin-left: .3em;
+    color: white;
+}
+
+.typed-text::after {
+    content: "";
+    width: 1px;
+    margin-left: .3em;
+    height: 5%;
+    border-right: 4px solid white;
+    animation: blink .9s infinite;
+
+}
+
+.no-blink {
+    position: relative;
+    margin-left: .3em;
+    color: white;
+}
+
+.no-blink::after {
+    content: "";
+    width: 1px;
+    margin-left: .3em;
+    height: 5%;
+    border-right: 4px solid white;
+}
+
+/* .text-cursor {
+    display: inline-block;
+    background-color: white;
+    width: 4px;
+    margin-left: 0.3rem;
+    animation: blink 1s infinite
+}*/
+
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
